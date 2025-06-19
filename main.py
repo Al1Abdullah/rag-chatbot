@@ -292,9 +292,9 @@ def main():
         
         # Launch with custom settings
         interface.launch(
-            server_name="127.0.0.1",  # Allow external access
-            server_port=7860,       # Default Gradio port
-            share=True             # Set to True for public link
+            server_name="0.0.0.0",  # Allow external access
+            server_port=int(os.environ.get("PORT", 7860)),       # Default Gradio port
+            share=False            # Set to True for public link
         )
 
     except Exception as e:

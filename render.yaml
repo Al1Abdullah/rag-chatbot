@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rag-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: GROQ_API_KEY
+        value: "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"
+    region: oregon
+    plan: free
+    autoDeploy: true
